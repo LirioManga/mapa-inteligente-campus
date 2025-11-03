@@ -93,7 +93,7 @@ prototipo-campus/
 
 1. Clonar o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/mapa-inteligente-campus.git
+   git clone https://github.com/LirioManga/mapa-inteligente-campus.git
    cd mapa-inteligente-campus
    ```
 
@@ -136,8 +136,3 @@ prototipo-campus/
 | [Fernando Maleiane] | Documentação, Diagramas e Interface |
 
 ---
-
-## 📄 Licença
-
-Este projeto é de uso académico e educativo.  
-© 2025 - MA-LI.
