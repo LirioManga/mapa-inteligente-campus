@@ -180,7 +180,7 @@ class GeminiController extends Controller
             return response()->json([
                 'categoria' => $categoria,
                 'gravidade' => $gravidade,
-                'sector' => $departamento,
+                'mensagem' => $departamento,
                 'raw' => $output
             ]);
         } catch (\Exception $e) {
