@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\BFSService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -55,7 +56,7 @@ class GeminiController extends Controller
     // }
 
 
-    public function interpretar(Request $request)
+    public function interpretar(Request $request, BFSService $bfs)
     {
         $texto = $request->input('texto');
 
@@ -174,10 +175,12 @@ class GeminiController extends Controller
 
             $categoria = $categoria ?: 'geral';
             $gravidade = $gravidade ?: 'baixa';
+            $departamento = $bfs->buscarDepartamentoInteligente('respiratória', 'alta');
 
             return response()->json([
                 'categoria' => $categoria,
                 'gravidade' => $gravidade,
+                'sector' => $departamento,
                 'raw' => $output
             ]);
         } catch (\Exception $e) {
